@@ -1,0 +1,18 @@
+<!-- Sidebar Holder -->
+<nav id="sidebar" [class.active]="leftMenuHidden">
+
+  <ul id="accordion" class="accordion" class="list-unstyled components">
+    <li *ngFor="let menu of menus; let i = index" [class.active]="menu.active">
+      <a class="menu" (click)="toggle(i)">
+        <fa-icon [icon]="menu.iconClass"></fa-icon>
+        <span *ngIf="!leftMenuHidden">&nbsp;{{ menu.name }}</span>
+        <!--<fa-icon icon="home"></fa-icon>-->
+      </a>
+      <ul class="submenu" #submenu [style.height.px]="menu.active ? submenu.scrollHeight : 0">
+        <li *ngFor="let submenu of menu.submenu">
+          <a [href]="submenu.url"><span *ngIf="!leftMenuHidden">&nbsp;{{ submenu.name }}</span></a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>

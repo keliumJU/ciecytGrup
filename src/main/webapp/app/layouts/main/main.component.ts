@@ -2,14 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRouteSnapshot, NavigationEnd, NavigationError } from '@angular/router';
 
 import { JhiLanguageHelper } from 'app/core';
+import { Config, Menu } from '../left-side-menu/types';
 
 @Component({
   selector: 'jhi-main',
   templateUrl: './main.component.html'
 })
 export class JhiMainComponent implements OnInit {
+  leftMenuHidden = false;
   constructor(private jhiLanguageHelper: JhiLanguageHelper, private router: Router) {}
 
+  toggleBtnLeftMenuEvent(event) {
+    this.leftMenuHidden = event;
+  }
   private getPageTitle(routeSnapshot: ActivatedRouteSnapshot) {
     let title: string = routeSnapshot.data && routeSnapshot.data['pageTitle'] ? routeSnapshot.data['pageTitle'] : 'ciecytApp';
     if (routeSnapshot.firstChild) {
@@ -28,4 +33,28 @@ export class JhiMainComponent implements OnInit {
       }
     });
   }
+
+  //Menu config
+  options: Config = { multi: false };
+
+  menus: Menu[] = [
+    {
+      name: 'Front-end',
+      iconClass: 'home',
+      active: true,
+      submenu: [{ name: 'HTML', url: '#' }, { name: 'CSS', url: '#' }, { name: 'Javascript', url: '#' }, { name: 'C++', url: '#' }]
+    },
+    {
+      name: 'Responsive web',
+      iconClass: 'home',
+      active: false,
+      submenu: [{ name: 'Tablets', url: '#' }, { name: 'Mobiles', url: '#' }, { name: 'Desktop', url: '#' }]
+    },
+    {
+      name: 'Web Browser',
+      iconClass: 'home',
+      active: false,
+      submenu: [{ name: 'Chrome', url: '#' }, { name: 'Firefox', url: '#' }, { name: 'Desktop', url: '#' }]
+    }
+  ];
 }

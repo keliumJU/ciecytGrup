@@ -17,6 +17,7 @@ Navbar
 }
 
 .navbar {
+  margin-bottom: 40px;
   padding: 0.2rem 1rem;
   .dropdown-item.active,
   .dropdown-item.active:focus,
@@ -51,4 +52,10 @@ Logo styles
   vertical-align: middle;
   background: url('../../../content/images/logo-jhipster.png') no-repeat center center;
   background-size: contain;
+}
+
+.btn-left-menu-toggle {
+  color: #151515;
+  font-size: 1.5em;
+  padding: 10px;
 }
