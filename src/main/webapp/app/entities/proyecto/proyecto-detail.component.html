@@ -48,38 +48,37 @@
                 <dt><span jhiTranslate="ciecytApp.proyecto.lineaDeInvestigacion">Linea De Investigacion</span></dt>
                 <dd>
                     <div *ngIf="proyecto.lineaDeInvestigacion">
-                        <a [routerLink]="['/linea-de-investigacion', proyecto.lineaDeInvestigacion?.id, 'view']">{{proyecto.lineaDeInvestigacion?.id}}</a>
+                        <a
+                            [routerLink]="['/linea-de-investigacion', proyecto.lineaDeInvestigacion?.id, 'view']">{{proyecto.lineaDeInvestigacion?.linea}}</a>
                     </div>
                 </dd>
                 <dt><span jhiTranslate="ciecytApp.proyecto.grupoSemillero">Grupo Semillero</span></dt>
                 <dd>
                     <div *ngIf="proyecto.grupoSemillero">
-                        <a [routerLink]="['/grupo-semillero', proyecto.grupoSemillero?.id, 'view']">{{proyecto.grupoSemillero?.id}}</a>
+                        <a
+                            [routerLink]="['/grupo-semillero', proyecto.grupoSemillero?.id, 'view']">{{proyecto.grupoSemillero?.nombre}}</a>
                     </div>
                 </dd>
                 <dt><span jhiTranslate="ciecytApp.proyecto.facultad">Facultad</span></dt>
                 <dd>
                     <div *ngIf="proyecto.facultad">
-                        <a [routerLink]="['/facultad', proyecto.facultad?.id, 'view']">{{proyecto.facultad?.id}}</a>
+                        <a [routerLink]="['/facultad', proyecto.facultad?.id, 'view']">{{proyecto.facultad?.nombre}}</a>
                     </div>
                 </dd>
                 <dt><span jhiTranslate="ciecytApp.proyecto.modalidadDeGrado">Modalidad De Grado</span></dt>
                 <dd>
                     <div *ngIf="proyecto.modalidadDeGrado">
-                        <a [routerLink]="['/modalidad-de-grado', proyecto.modalidadDeGrado?.id, 'view']">{{proyecto.modalidadDeGrado?.id}}</a>
+                        <a
+                            [routerLink]="['/modalidad-de-grado', proyecto.modalidadDeGrado?.id, 'view']">{{proyecto.modalidadDeGrado?.modalidad}}</a>
                     </div>
                 </dd>
             </dl>
 
-            <button type="submit"
-                    (click)="previousState()"
-                    class="btn btn-info">
+            <button type="submit" (click)="previousState()" class="btn btn-info">
                 <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
             </button>
 
-            <button type="button"
-                    [routerLink]="['/proyecto', proyecto.id, 'edit']"
-                    class="btn btn-primary">
+            <button type="button" [routerLink]="['/proyecto', proyecto.id, 'edit']" class="btn btn-primary">
                 <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
             </button>
         </div>

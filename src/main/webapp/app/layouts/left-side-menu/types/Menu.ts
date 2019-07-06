@@ -2,5 +2,5 @@ export type Menu = {
   name: string;
   iconClass: string;
   active: boolean;
-  submenu: { name: string; url: string }[];
+  submenu: { iconClass: string; name: string; url: string }[];
 };

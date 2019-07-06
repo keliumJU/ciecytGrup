@@ -10,7 +10,11 @@
       </a>
       <ul class="submenu" #submenu [style.height.px]="menu.active ? submenu.scrollHeight : 0">
         <li *ngFor="let submenu of menu.submenu">
-          <a [href]="submenu.url"><span *ngIf="!leftMenuHidden">&nbsp;{{ submenu.name }}</span></a>
+          <a [href]="submenu.url">
+            <fa-icon [icon]="submenu.iconClass"></fa-icon>
+            <span *ngIf="!leftMenuHidden">&nbsp;{{ submenu.name }}
+            </span>
+          </a>
         </li>
       </ul>
     </li>

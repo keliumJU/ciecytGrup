@@ -100,7 +100,7 @@ public class FacultadResource {
         log.debug("REST request to get Facultad : {}", id);
         Optional<Facultad> facultad = facultadService.findOne(id);
         return ResponseUtil.wrapOrNotFound(facultad);
-    }
+}
 
     /**
      * {@code DELETE  /facultads/:id} : delete the "id" facultad.

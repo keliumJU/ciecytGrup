@@ -53,7 +53,7 @@ public class CiecytApp implements InitializingBean {
     }
 
     /**
-     * Main method, used to run the application.
+      Main method, used to run the application.
      *
      * @param args the command line arguments.
      */

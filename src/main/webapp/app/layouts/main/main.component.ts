@@ -42,19 +42,32 @@ export class JhiMainComponent implements OnInit {
       name: 'Front-end',
       iconClass: 'home',
       active: true,
-      submenu: [{ name: 'HTML', url: '#' }, { name: 'CSS', url: '#' }, { name: 'Javascript', url: '#' }, { name: 'C++', url: '#' }]
+      submenu: [
+        { iconClass: 'home', name: 'HTML', url: '#' },
+        { iconClass: 'home', name: 'CSS', url: '#' },
+        { iconClass: 'home', name: 'Javascript', url: '#' },
+        { iconClass: 'home', name: 'C++', url: '#' }
+      ]
     },
     {
       name: 'Responsive web',
       iconClass: 'home',
       active: false,
-      submenu: [{ name: 'Tablets', url: '#' }, { name: 'Mobiles', url: '#' }, { name: 'Desktop', url: '#' }]
+      submenu: [
+        { iconClass: 'home', name: 'Tablets', url: '#' },
+        { iconClass: 'home', name: 'Mobiles', url: '#' },
+        { iconClass: 'home', name: 'Desktop', url: '#' }
+      ]
     },
     {
       name: 'Web Browser',
       iconClass: 'home',
       active: false,
-      submenu: [{ name: 'Chrome', url: '#' }, { name: 'Firefox', url: '#' }, { name: 'Desktop', url: '#' }]
+      submenu: [
+        { iconClass: 'home', name: 'Chrome', url: '#' },
+        { iconClass: 'home', name: 'Firefox', url: '#' },
+        { iconClass: 'home', name: 'Desktop', url: '#' }
+      ]
     }
   ];
 }

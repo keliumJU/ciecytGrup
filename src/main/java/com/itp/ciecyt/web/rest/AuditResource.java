@@ -77,4 +77,6 @@ public class AuditResource {
     public ResponseEntity<AuditEvent> get(@PathVariable Long id) {
         return ResponseUtil.wrapOrNotFound(auditEventService.find(id));
     }
+
+
 }

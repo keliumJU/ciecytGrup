@@ -32,6 +32,7 @@
     "rxjs": "6.4.0",
     "swagger-ui": "2.2.10",
     "tslib": "1.9.3",
+    "yarn": "^1.16.0",
     "zone.js": "0.8.29"
   },
   "devDependencies": {

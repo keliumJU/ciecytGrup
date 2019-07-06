@@ -12,26 +12,24 @@
                 <dt><span jhiTranslate="ciecytApp.preguntas.elementos">Elementos</span></dt>
                 <dd>
                     <div *ngIf="preguntas.elementos">
-                        <a [routerLink]="['/elementos', preguntas.elementos?.id, 'view']">{{preguntas.elementos?.id}}</a>
+                        <a
+                            [routerLink]="['/elementos', preguntas.elementos?.id, 'view']">{{preguntas.elementos?.elemento}}</a>
                     </div>
                 </dd>
                 <dt><span jhiTranslate="ciecytApp.preguntas.faseTrabajo">Fase Trabajo</span></dt>
                 <dd>
                     <div *ngIf="preguntas.faseTrabajo">
-                        <a [routerLink]="['/fase-trabajo', preguntas.faseTrabajo?.id, 'view']">{{preguntas.faseTrabajo?.id}}</a>
+                        <a
+                            [routerLink]="['/fase-trabajo', preguntas.faseTrabajo?.id, 'view']">{{preguntas.faseTrabajo?.faseTrabajo}}</a>
                     </div>
                 </dd>
             </dl>
 
-            <button type="submit"
-                    (click)="previousState()"
-                    class="btn btn-info">
+            <button type="submit" (click)="previousState()" class="btn btn-info">
                 <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
             </button>
 
-            <button type="button"
-                    [routerLink]="['/preguntas', preguntas.id, 'edit']"
-                    class="btn btn-primary">
+            <button type="button" [routerLink]="['/preguntas', preguntas.id, 'edit']" class="btn btn-primary">
                 <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
             </button>
         </div>

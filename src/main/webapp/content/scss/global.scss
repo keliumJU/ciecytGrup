@@ -171,3 +171,222 @@ ui bootstrap tweaks
 }
 
 /* jhipster-needle-scss-add-main JHipster will add new css style */
+
+//SIDEBAR
+.main-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background: #88b5f0;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+#sidebar.active {
+  /* margin-left: -210px; */
+
+  min-width: 50px; //Cuando esta cerrado
+  width: 50px !important;
+}
+#sidebar.active .submenu {
+  /* margin-left: -210px; */
+  padding: 0px 0px 0px 10px;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #353d47;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+  height: 40px;
+}
+#sidebar ul {
+  list-style: none;
+}
+
+#sidebar ul li a:hover {
+  color: #495059;
+  background: #fff;
+}
+
+#sidebar ul li.active>a,
+/* a[aria-expanded="true"] {
+  color: #fff;
+  background: #353d47;
+} */
+/* 
+a[data-toggle="collapse"] {
+  position: relative;
+} */
+
+/* a[aria-expanded="false"]::before,
+a[aria-expanded="true"]::before {
+  content: '\e259';
+  display: block;
+  position: absolute;
+  right: 20px;
+  font-family: 'Glyphicons Halflings';
+  font-size: 0.6em;
+}
+
+a[aria-expanded="true"]::before {
+  content: '\e260';
+} */
+
+/* ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #353d47;
+} */
+
+ul.CTAs {
+  padding: 20px;
+}
+
+ul.CTAs a {
+  text-align: center;
+  font-size: 0.9em !important;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+/* 
+a.download {
+  background: #fff;
+  color: #495059;
+}
+
+a.article,
+a.article:hover {
+  background: #353d47 !important;
+  color: #fff !important;
+} */
+
+//Mediaquery
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  #sidebarCollapse span {
+    display: none;
+  }
+}
+#sidebar.active li > a > i {
+  float: center;
+}
+
+.accordion {
+  width: 100%;
+  max-width: 360px;
+  margin: auto;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.accordion .menu {
+  position: relative;
+  padding: 15px 15px 15px 45px;
+  color: #4d4d4d;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.accordion li:last-child .menu {
+  border-bottom: 0;
+}
+
+.accordion li i {
+  position: absolute;
+  top: 1.2rem;
+  left: 1rem;
+  color: #595959;
+  transition: all 0.4s ease;
+}
+
+.accordion li i.fa-chevron-down {
+  right: 1rem;
+  left: auto;
+}
+
+.accordion li.active i.fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+.accordion li.active .menu {
+  color: #b63b4d;
+}
+
+.accordion li.active i {
+  color: #b63b4d;
+}
+
+/* Show submenu */
+.accordion li.active .submenu {
+  /*
+    height: 0 -> height: auto;는 transition이 동작하지 않는다.
+    max-height: 임의의 높이;를 지정하면 transition이 동작하지만 타이밍이 망가진다.
+    max-height: 1000px;과 max-height: 133px;을 비교해 보라!
+    height를 1000px으로 transition할 시간에 실제로는 133px정도만 transition하므로 여는 시간이 닫는 시간보다 빠르다.
+  */
+  /* max-height: 1000px; */
+  /* max-height: 133px; */
+}
+
+.submenu {
+  height: 0;
+  overflow: hidden;
+  background: #444359;
+  font-size: 14px;
+  padding: 0px 0px 0px 20px;
+  transition: height 0.4s ease;
+}
+
+.submenu li {
+  border-bottom: 1px solid #4b4a5e;
+}
+
+.accordion li:last-child .submenu {
+  border-radius: 0 0 4px 4px;
+}
+
+.accordion li:last-child .submenu li:last-child {
+  border-bottom: 0;
+}
+
+.submenu a {
+  display: block;
+  text-decoration: none;
+  color: #d9d9d9;
+  padding: 12px;
+  padding-left: 42px;
+  transition: all 0.25s ease-in-out;
+}
+
+.submenu a:hover {
+  background: #b63b4d;
+  color: #fff;
+}

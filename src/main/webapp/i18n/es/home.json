@@ -1,7 +1,8 @@
 {
   "home": {
-    "title": "¡Bienvenido, Java Hipster!",
-    "subtitle": "Esta es su página de inicio",
+    "title": "¡Bienvenido al, SGTG",
+
+    "subtitle": "Sistema de gestion de trabajos de grado",
     "logged": {
       "message": "Está conectado como \"{{username}}\"."
     },

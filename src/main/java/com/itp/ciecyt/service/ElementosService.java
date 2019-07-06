@@ -9,7 +9,6 @@ import java.util.Optional;
  * Service Interface for managing {@link Elementos}.
  */
 public interface ElementosService {
-
     /**
      * Save a elementos.
      *
