@@ -43,7 +43,7 @@ export class JhiMainComponent implements OnInit {
       iconClass: 'home',
       active: true,
       submenu: [
-        { iconClass: 'home', name: 'HTML', url: '#' },
+        { iconClass: 'home', name: 'Crear Proyecto', url: 'proyecto/new' },
         { iconClass: 'home', name: 'CSS', url: '#' },
         { iconClass: 'home', name: 'Javascript', url: '#' },
         { iconClass: 'home', name: 'C++', url: '#' }
